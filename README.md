@@ -7,4 +7,4 @@
 
 > Note: A branch is created for each homework assignment.
 
-To check the first homework, open the `dev-lab-1` branch.
+To check the second homework, open the `dev-lab-2` branch :)
