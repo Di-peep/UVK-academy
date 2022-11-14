@@ -43,13 +43,13 @@ class SecondFibonacciIterator:
 
     def __getitem__(self, item: int):
         if item < self.length:
-            return self.__fib(item)
+            return self.fib(item)
         raise IndexError
 
-    def __fib(self, index: int):
+    def fib(self, index: int):
         if index < 2:
             return index
-        return self.__fib(index - 1) + self.__fib(index - 2)
+        return self.fib(index - 1) + self.fib(index - 2)
 
     def __len__(self):
         return self.length
