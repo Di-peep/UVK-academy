@@ -30,8 +30,8 @@ class FirstFibonacciIterator:
             self.n2 = n0 + self.n1
             self.step += 1
             return n0
-        else:
-            raise StopIteration
+
+        raise StopIteration
 
 
 class SecondFibonacciIterator:
