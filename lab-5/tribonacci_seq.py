@@ -26,7 +26,7 @@ def check_input(trio: tuple, amount: int):
     if len(trio) < 3:
         print("Length first trio must be 3!")
         return False
-    if not all([isinstance(element, int) for element in trio + (amount,)]):
+    if not all((isinstance(element, int) for element in trio + (amount,))):
         print("Expected type is integer")
         return False
     if amount < 0:
@@ -40,16 +40,16 @@ def check_input(trio: tuple, amount: int):
 def get_tribonacci_number(trio: tuple, index: int):
     if index < 3:
         return trio[index]
-    return \
-        get_tribonacci_number(trio, index - 1) + \
-        get_tribonacci_number(trio, index - 2) + \
-        get_tribonacci_number(trio, index - 3)
+    return (
+        get_tribonacci_number(trio, index - 1)
+        + get_tribonacci_number(trio, index - 2)
+        + get_tribonacci_number(trio, index - 3)
+    )
 
 
 def tribonacci_sequence(trio: tuple, amount: int):
     if check_input(trio, amount):
         return [get_tribonacci_number(trio, n) for n in range(amount)]
-
     return []
 
 
