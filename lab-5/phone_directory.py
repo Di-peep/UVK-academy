@@ -25,16 +25,15 @@ Note: It can happen that there are many people for a phone number num, then retu
 
 
 def get_clear_row(row: str) -> str:
-    row = row.replace('!', ' ')
-    row = row.replace('/', ' ')
-    row = row.replace(';', ' ')
-    row = row.replace(',', ' ')
-    row = row.replace('_', ' ')
+    replacements = ('!', '/', ';', ',', '_')
+    for replacement in replacements:
+        row = row.replace(replacement, " ")
+
     return row
 
 
 def clear_phone_book(txt: str):
-    for row in txt.split('\n'):
+    for row in txt.splitlines():
         clear_row = get_clear_row(row)
         name = ''
         phone = ''
