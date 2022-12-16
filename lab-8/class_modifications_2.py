@@ -50,13 +50,10 @@ class PowerBank:
 
 
 class User:
+    """My main task is charge phone or something else before outgoing."""
     @staticmethod
     def put_device_on_a_charger(device, charger):
         device.charge_from(charger)
-
-    @staticmethod
-    def __doc__():
-        return """My main task is charge phone or something else before outgoing"""
 
 
 if __name__ == '__main__':
