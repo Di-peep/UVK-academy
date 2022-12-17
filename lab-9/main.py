@@ -1,8 +1,8 @@
 """
 Title: Modules & Imports
 
-Task: Split your class topology into python package (several packages are preferred) and
-    configure importing between them.
+Task: Split your class topology into python package (several packages are
+    preferred) and configure importing between them.
 
 Note: it's recommended to add importing data in the `__init__.py` file.
 """

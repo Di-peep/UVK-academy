@@ -4,3 +4,5 @@ from . import (
     composition,
     dependency
 )
+
+__all__ = (aggregation, association, composition, dependency)
