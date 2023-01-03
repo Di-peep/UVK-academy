@@ -35,8 +35,8 @@ commit;
 
 
 select pt.post_id, pt.title, count(cm.comment) 'comment counter',
-	case
-		when count(cm.comment) < 1 then 'unpopular'
+    case
+	when count(cm.comment) < 1 then 'unpopular'
         when count(cm.comment) = 1 then 'popular'
         when count(cm.comment) > 1 then 'very popular'
     end as popularity
