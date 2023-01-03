@@ -15,7 +15,7 @@ from post pt
 join comment cm on pt.post_id = cm.post_id
 group by pt.post_id, pt.title
 having count(cm.comment) = (
-	select count(cm.comment)
+    select count(cm.comment)
     from comment cm
     group by cm.post_id
     order by 1 desc
@@ -25,7 +25,7 @@ having count(cm.comment) = (
 -- From clause with subquery in it
 select res.*, us.*
 from (
-	select pt.post_id, pt.title, pt.date 'post_date', cm.user_id, cm.date 'comment_date'
+    select pt.post_id, pt.title, pt.date 'post_date', cm.user_id, cm.date 'comment_date'
     from post pt
     join comment cm on pt.post_id = cm.post_id
     where pt.date = curdate()
@@ -36,13 +36,13 @@ join user us on res.user_id = us.user_id;
 select *
 from post
 where post.date in (
-	select min(comment.date)
+    select min(comment.date)
     from comment
 );
 
 -- Join User table and Comment table using WITH
 with 
-	cte1 as (select user_id, nickname from user),
+    cte1 as (select user_id, nickname from user),
     cte2 as (select user_id, comment from comment)
 select * from cte1 join cte2 on ct1.user_id = cte2.user_id
 
