@@ -21,6 +21,7 @@ def run_tcp_server():
             conn.send('Message is received'.encode())
         except Exception as err:
             print(f'Error: {err}')
+            conn.close()
             break
 
 

@@ -16,6 +16,7 @@ def run_client():
             print(response.decode())
         except Exception as err:
             print(err)
+            client.detach()
             break
 
 
